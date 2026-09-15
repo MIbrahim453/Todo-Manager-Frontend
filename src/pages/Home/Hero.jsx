@@ -14,13 +14,13 @@ function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <Link
             to="/sign-up"
-            className="rounded-md bg-primary px-7 py-3 font-semibold text-primary-text transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 font-semibold text-primary-text transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
           >
             Get started - free
           </Link>
           <Link
             to="/login"
-            className="rounded-md border border-border px-7 py-3 font-semibold text-text-primary transition-colors hover:bg-secondary-hover-bg hover:text-secondary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+            className="inline-flex items-center justify-center rounded-md border border-border px-7 py-3 font-semibold text-text-primary transition-colors hover:bg-secondary-hover-bg hover:text-secondary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
           >
             Login
           </Link>

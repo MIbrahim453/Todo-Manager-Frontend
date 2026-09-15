@@ -54,24 +54,26 @@ function Navbar() {
       <div className="hidden md:flex items-center gap-6 font-manrope font-medium">
         <Link
           to="/login"
-            className="text-text-primary hover:bg-gray-100 px-4 py-2 rounded-md transition-all duration-300"
+          className="inline-flex items-center justify-center text-text-primary hover:bg-gray-100 px-4 py-2 rounded-md transition-all duration-300"
         >
           Login
         </Link>
         <Link
           to="/sign-up"
-            className="bg-primary text-primary-text hover:bg-primary-hover px-4 py-2 rounded-md transition-all duration-300"
+          className="inline-flex items-center justify-center bg-primary text-primary-text hover:bg-primary-hover px-4 py-2 rounded-md transition-all duration-300"
         >
           Get Started
         </Link>
       </div>
-      <Button
-        type="text"
-        icon={<MenuOutlined style={{ fontSize: 22 }} />}
-        onClick={toggleNavbar}
-        className="flex md:hidden items-center justify-center text-text-primary!"
-        aria-label="Open menu"
-      />
+      <div className="flex md:hidden items-center">
+        <Button
+          type="text"
+          icon={<MenuOutlined style={{ fontSize: 22 }} />}
+          onClick={toggleNavbar}
+          className="flex items-center justify-center text-text-primary!"
+          aria-label="Open menu"
+        />
+      </div>
       <Drawer
         title={
           <Link

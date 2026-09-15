@@ -15,7 +15,7 @@ function CallToAction() {
         <div className="mt-9 flex flex-col justify-center items-center sm:flex-row sm:items-center">
           <Link
             to="/sign-up"
-            className="rounded-md bg-primary px-8 py-4 text-center font-semibold text-primary-text shadow-lg shadow-primary/20 transition-colors duration-300 hover:bg-primary-hover"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-center font-semibold text-primary-text shadow-lg shadow-primary/20 transition-colors duration-300 hover:bg-primary-hover"
           >
             Get Started Free
           </Link>
