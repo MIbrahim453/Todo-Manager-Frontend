@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@layer theme, base, antd, components, utilities;
+
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --color-background: #fefdfc;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #fff6f0;
+  --color-surface-muted: #f4f3f0;
+
+  --color-text-primary: #25221e;
+  --color-text-secondary: #4a4744;
+  --color-text-muted: #6f6c69;
+  --color-text-placeholder: #94928f;
+
+  --color-border: #d7d6d4;
+  --color-border-focus: #0f66ae;
+
+  --color-primary: #e34432;
+  --color-primary-hover: #cf3520;
+  --color-primary-text: #fefdfc;
+  --color-secondary: #0f66ae;
+  --color-secondary-hover: #004880;
+  --color-secondary-hover-bg: #fff6f0;
+
+  --color-card-hover: #fff6f0;
+  --color-card-border: #d7d6d4;
+  --color-input-background: #fefdfc;
+  --color-input-focus: #4a4744;
+
+  --color-success: #446c3d;
+  --color-success-bg: #f0f6df;
+  --color-info: #0f66ae;
+  --color-info-bg: #dceaff;
+  --color-neutral: #4a4744;
+  --color-neutral-bg: #f4f3f0;
+  --color-error: #ba1a1a;
+  --color-error-bg: #ffdad6;
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
