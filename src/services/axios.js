@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+let refreshPromise = null;
 
 const api = axios.create({ baseURL: BASE_URL });
 
@@ -24,26 +25,42 @@ api.interceptors.response.use(
   },
   async (error) => {
     const status = error.response?.status;
-    const isAuthRequest = error.config?.url?.includes("/auth/");
+    const originalRequest = error.config;
+    const isAuthRequest = originalRequest?.url?.includes("/auth/");
 
-    if ((status === 401 || status === 403) && !isAuthRequest) {
+    if (
+      (status === 401 || status === 403) &&
+      !isAuthRequest &&
+      originalRequest &&
+      !originalRequest._retry
+    ) {
+      originalRequest._retry = true;
+
       try {
         const refreshToken = localStorage.getItem("refreshToken");
         if (!refreshToken) {
           throw new Error("Refresh Token not found");
         }
-        const res = await api.post("/auth/refresh-token", {
-          refreshToken,
-        });
-        if (res?.data?.accessToken) {
-          const { accessToken } = res.data;
-          localStorage.setItem("accessToken", accessToken);
 
-          const originalRequest = error.config;
-          originalRequest.headers.Authorization = `Bearer ${accessToken}`;
-
-          return await api(originalRequest);
+        if (!refreshPromise) {
+          refreshPromise = api
+            .post("/auth/refresh-token", { refreshToken })
+            .then((res) => res?.data?.accessToken)
+            .finally(() => {
+              refreshPromise = null;
+            });
         }
+
+        const accessToken = await refreshPromise;
+        if (!accessToken) {
+          throw new Error("Access Token was not returned");
+        }
+
+        localStorage.setItem("accessToken", accessToken);
+        originalRequest.headers = originalRequest.headers || {};
+        originalRequest.headers.Authorization = `Bearer ${accessToken}`;
+
+        return api(originalRequest);
       } catch (error) {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
