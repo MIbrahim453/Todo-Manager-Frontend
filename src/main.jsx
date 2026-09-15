@@ -34,6 +34,23 @@ createRoot(document.getElementById("root")).render(
             colorPrimaryHover: "#cf3520",
             colorPrimaryActive: "#a82414",
           },
+          Card: {
+            colorBorderSecondary: "#d7d6d4",
+            colorBgContainer: "#ffffff",
+          },
+          Layout: {
+            headerBg: "#fefdfc",
+            footerBg: "#fefdfc",
+            bodyBg: "#fefdfc",
+          },
+          Typography: {
+            colorText: "#25221e",
+            colorTextHeading: "#25221e",
+            colorTextDescription: "#4a4744",
+            colorLink: "#e34432",
+            colorLinkHover: "#cf3520",
+            colorLinkActive: "#a82414",
+          },
           Message: {
             contentBg: "#ffffff",
           },

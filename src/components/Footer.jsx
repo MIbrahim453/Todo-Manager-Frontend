@@ -7,44 +7,41 @@ const { Text, Title } = Typography;
 
 function Footer() {
   return (
-    <AntFooter className="bg-background! px-6! py-12! sm:px-10!">
+    <AntFooter className="border-t border-border bg-background px-6 py-12 font-manrope sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <Row gutter={[32, 32]}>
           <Col xs={24} md={10}>
-            <Link to="/" className="mb-4 flex items-center gap-2">
-              <img src={logo} alt="Task Manager" className="h-10 w-10" />
-              <Title
-                level={4}
-                className="mb-0! text-text-primary! font-manrope!"
-              >
+            <Link to="/" className="mb-4 flex items-center gap-2.5">
+              <img src={logo} alt="Task Manager" className="h-9 w-9 object-contain" />
+              <span className="font-manrope text-xl font-bold tracking-tight text-text-primary">
                 Task Manager
-              </Title>
+              </span>
             </Link>
-            <Text className="text-text-primary font-manrope!">
+            <p className="max-w-sm font-manrope text-sm text-text-secondary">
               Plan your day, stay focused, and get more done.
-            </Text>
+            </p>
           </Col>
 
           <Col xs={12} sm={8} md={5}>
-            <Title level={5} className="text-text-primary font-manrope!">
+            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
               Explore
-            </Title>
-            <div className="flex flex-col gap-3 font-manrope">
+            </h3>
+            <div className="flex flex-col gap-2.5 font-manrope text-sm">
               <a
                 href="#features"
-                className="text-text-primary! hover:text-text-primary!"
+                className="text-text-secondary transition-colors hover:text-primary"
               >
                 Features
               </a>
               <a
                 href="#work"
-                className="text-text-primary! hover:text-text-primary!"
+                className="text-text-secondary transition-colors hover:text-primary"
               >
                 How It Works
               </a>
               <a
                 href="#testimonial"
-                className="text-text-primary! hover:text-text-primary!"
+                className="text-text-secondary transition-colors hover:text-primary"
               >
                 Testimonials
               </a>
@@ -52,19 +49,19 @@ function Footer() {
           </Col>
 
           <Col xs={12} sm={8} md={5}>
-            <Title level={5} className="text-text-primary! font-manrope!">
+            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
               Account
-            </Title>
-            <div className="flex flex-col gap-3 font-manrope">
+            </h3>
+            <div className="flex flex-col gap-2.5 font-manrope text-sm">
               <Link
                 to="/login"
-                className="text-text-primary! hover:text-text-primary!"
+                className="text-text-secondary transition-colors hover:text-primary"
               >
                 Log in
               </Link>
               <Link
                 to="/sign-up"
-                className="text-text-primary! hover:text-text-primary!"
+                className="text-text-secondary transition-colors hover:text-primary"
               >
                 Get started
               </Link>
@@ -72,22 +69,22 @@ function Footer() {
           </Col>
 
           <Col xs={24} sm={8} md={4}>
-            <Title level={5} className="text-text-primary! font-manrope!">
+            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
               Support
-            </Title>
+            </h3>
             <Link
               to="/forget-password"
-              className="text-text-primary! hover:text-text-primary! font-manrope"
+              className="font-manrope text-sm text-text-secondary transition-colors hover:text-primary"
             >
               Forgot password?
             </Link>
           </Col>
         </Row>
 
-        <Divider className="border-border!" />
-        <Text className="text-text-primary! font-manrope!">
+        <div className="my-8 border-t border-border" />
+        <p className="font-manrope text-sm text-text-muted">
           © {new Date().getFullYear()} Task Manager. All rights reserved.
-        </Text>
+        </p>
       </div>
     </AntFooter>
   );

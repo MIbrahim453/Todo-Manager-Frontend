@@ -6,21 +6,21 @@ const steps = [
     title: "Created",
     description:
       "Jot down tasks instantly with keyboard shortcuts or voice memos. Everything lands cleanly in your inbox.",
-    numberClassName: "text-primary!",
+    numberClassName: "text-primary",
   },
   {
     number: "02",
     title: "Organize",
     description:
       "Categorize into ledgers, tag with metadata, and prioritize with slender accent bars.",
-    numberClassName: "text-secondary!",
+    numberClassName: "text-secondary",
   },
   {
     number: "03",
     title: "Share",
     description:
       "Send direct task links to collaborators or invite team members to entire project views.",
-    numberClassName: "text-success!",
+    numberClassName: "text-success",
   },
 ];
 
@@ -28,7 +28,7 @@ function Work() {
   return (
     <section
       id="work"
-      className="bg-background px-6 py-24 font-manrope sm:px-10 lg:px-16"
+      className="bg-background px-6 py-20 font-manrope sm:px-10 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
@@ -44,8 +44,8 @@ function Work() {
           {steps.map((step) => (
             <Col key={step.number} xs={24} md={8}>
               <Card
-                className="h-full rounded-lg! border-card-border! bg-surface! shadow-none! transition-transform duration-300 hover:-translate-y-1"
-                styles={{ body: { padding: 28 } }}
+                className="h-full rounded-xl border border-card-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                styles={{ body: { padding: 32 } }}
               >
                 <span
                   className={`text-4xl font-bold leading-none ${step.numberClassName}`}
