@@ -7,84 +7,91 @@ const { Text, Title } = Typography;
 
 function Footer() {
   return (
-    <AntFooter className="border-t border-border bg-background px-6 py-12 font-manrope sm:px-10 lg:px-16">
-      <div className="mx-auto max-w-7xl">
-        <Row gutter={[32, 32]}>
-          <Col xs={24} md={10}>
-            <Link to="/" className="mb-4 flex items-center gap-2.5">
-              <img src={logo} alt="Task Manager" className="h-9 w-9 object-contain" />
-              <span className="font-manrope text-xl font-bold tracking-tight text-text-primary">
+    <AntFooter className="border-t border-[#ece6df] bg-transparent px-6 py-12 font-manrope sm:px-10 lg:px-20">
+      <div className="mx-auto max-w-6xl">
+        <Row gutter={[32, 32]} justify="space-between">
+          <Col xs={24} md={8}>
+            <Link to="/" className="mb-2 flex items-center gap-2">
+              <img src={logo} alt="Task Manager" className="h-7 w-7 object-contain" />
+              <span className="font-manrope text-base font-bold tracking-tight text-text-primary">
                 Task Manager
               </span>
             </Link>
-            <p className="max-w-sm font-manrope text-sm text-text-secondary">
+            <p className="font-manrope text-xs text-text-muted">
               Plan your day, stay focused, and get more done.
             </p>
           </Col>
 
-          <Col xs={12} sm={8} md={5}>
-            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
-              Explore
-            </h3>
-            <div className="flex flex-col gap-2.5 font-manrope text-sm">
-              <a
-                href="#features"
-                className="text-text-secondary transition-colors hover:text-primary"
-              >
-                Features
-              </a>
-              <a
-                href="#work"
-                className="text-text-secondary transition-colors hover:text-primary"
-              >
-                How It Works
-              </a>
-              <a
-                href="#testimonial"
-                className="text-text-secondary transition-colors hover:text-primary"
-              >
-                Testimonials
-              </a>
-            </div>
-          </Col>
+          <Col xs={24} md={14}>
+            <Row gutter={[24, 24]}>
+              <Col xs={8} sm={8}>
+                <h3 className="mb-3 font-manrope text-xs font-bold text-text-primary">
+                  Explore
+                </h3>
+                <div className="flex flex-col gap-2 font-manrope text-[11px]">
+                  <a
+                    href="#features"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    Features
+                  </a>
+                  <a
+                    href="#work"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    How It Works
+                  </a>
+                  <a
+                    href="#testimonial"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    Testimonials
+                  </a>
+                </div>
+              </Col>
 
-          <Col xs={12} sm={8} md={5}>
-            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
-              Account
-            </h3>
-            <div className="flex flex-col gap-2.5 font-manrope text-sm">
-              <Link
-                to="/login"
-                className="text-text-secondary transition-colors hover:text-primary"
-              >
-                Log in
-              </Link>
-              <Link
-                to="/sign-up"
-                className="text-text-secondary transition-colors hover:text-primary"
-              >
-                Get started
-              </Link>
-            </div>
-          </Col>
+              <Col xs={8} sm={8}>
+                <h3 className="mb-3 font-manrope text-xs font-bold text-text-primary">
+                  Account
+                </h3>
+                <div className="flex flex-col gap-2 font-manrope text-[11px]">
+                  <Link
+                    to="/login"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    Log in
+                  </Link>
+                  <Link
+                    to="/sign-up"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    Get started
+                  </Link>
+                </div>
+              </Col>
 
-          <Col xs={24} sm={8} md={4}>
-            <h3 className="mb-4 font-manrope text-base font-semibold text-text-primary">
-              Support
-            </h3>
-            <Link
-              to="/forget-password"
-              className="font-manrope text-sm text-text-secondary transition-colors hover:text-primary"
-            >
-              Forgot password?
-            </Link>
+              <Col xs={8} sm={8}>
+                <h3 className="mb-3 font-manrope text-xs font-bold text-text-primary">
+                  Support
+                </h3>
+                <div className="flex flex-col gap-2 font-manrope text-[11px]">
+                  <Link
+                    to="/forget-password"
+                    className="text-[#e34432]/80 transition-colors hover:text-primary"
+                  >
+                    Forgot password?
+                  </Link>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
 
-        <div className="my-8 border-t border-border" />
-        <p className="font-manrope text-sm text-text-muted">
-          © {new Date().getFullYear()} Task Manager. All rights reserved.
-        </p>
+        <div className="mt-12">
+          <p className="font-manrope text-[11px] text-text-placeholder">
+            © 2026 Task Manager. All rights reserved.
+          </p>
+        </div>
       </div>
     </AntFooter>
   );

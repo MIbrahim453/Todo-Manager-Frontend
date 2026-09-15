@@ -28,21 +28,21 @@ function Navbar() {
 
   return (
     <Header
-      className={`sticky top-0 z-50 flex h-20 items-center justify-between border-b border-border bg-background px-6 transition-shadow duration-300 sm:px-10 lg:px-16 ${
-        scrolled ? "shadow-sm" : "shadow-none"
+      className={`sticky top-0 z-50 flex h-20 items-center justify-between border-b border-[#ede7e0] bg-[#fefdfc] px-6 transition-all duration-300 sm:px-10 lg:px-20 ${
+        scrolled ? "shadow-xs" : "shadow-none"
       }`}
       style={{ lineHeight: "normal" }}
     >
       <div className="shrink-0">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="Todo Manager" className="h-9 w-9 object-contain" />
-          <span className="font-manrope text-xl font-bold tracking-tight text-text-primary sm:text-2xl">
+          <img src={logo} alt="Todo Manager" className="h-8 w-8 object-contain" />
+          <span className="font-manrope text-lg font-bold tracking-tight text-text-primary sm:text-xl">
             Task Manager
           </span>
         </Link>
       </div>
 
-      <nav className="hidden items-center gap-8 font-manrope font-medium md:flex">
+      <nav className="hidden items-center gap-10 font-manrope text-xs font-medium md:flex">
         {navLinks.map((link) => (
           <a
             key={link.href}
@@ -54,16 +54,16 @@ function Navbar() {
         ))}
       </nav>
 
-      <div className="hidden items-center gap-4 font-manrope md:flex">
+      <div className="hidden items-center gap-3 font-manrope md:flex">
         <Link
           to="/login"
-          className="inline-flex items-center justify-center rounded-md border border-border px-5 py-2 text-sm font-semibold text-text-primary transition-colors hover:bg-surface-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+          className="inline-flex items-center justify-center rounded-lg border border-[#d7d6d4] bg-white px-5 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all hover:bg-surface-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
         >
           Login
         </Link>
         <Link
           to="/sign-up"
-          className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2 text-sm font-semibold text-primary-text transition-colors hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+          className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-xs font-semibold text-white shadow-xs transition-all hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
         >
           Get Started
         </Link>
@@ -74,7 +74,7 @@ function Navbar() {
           type="text"
           icon={<MenuOutlined style={{ fontSize: 20, color: "#25221e" }} />}
           onClick={toggleNavbar}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface text-text-primary transition-colors hover:bg-surface-secondary"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#d7d6d4] bg-white text-text-primary transition-colors hover:bg-surface-secondary"
           aria-label="Open menu"
         />
       </div>

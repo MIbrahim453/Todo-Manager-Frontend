@@ -41,10 +41,68 @@
   html {
     scrollbar-gutter: stable;
   }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-manrope);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+/* Ensure Ant Design components respect custom typography and backgrounds */
+.ant-btn {
+  font-family: var(--font-manrope) !important;
+}
+
+.ant-card {
+  font-family: var(--font-manrope) !important;
+}
+
+.ant-table {
+  font-family: var(--font-manrope) !important;
+}
+
+.ant-menu {
+  font-family: var(--font-manrope) !important;
+}
+
+.ant-input, .ant-input-affix-wrapper {
+  font-family: var(--font-manrope) !important;
+}
+
+/* Ensure user-applied Tailwind color utilities on Ant Design components always win */
+.ant-btn.bg-primary, .ant-btn[class*="bg-primary"] {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+}
+
+.ant-btn.bg-primary:hover, .ant-btn[class*="bg-primary"]:hover {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: #ffffff !important;
+}
+
+.ant-layout, .ant-layout-header, .ant-layout-sider, .ant-layout-footer {
+  background-color: var(--color-background) !important;
+}
+
+.ant-card[class*="bg-surface"] {
+  background-color: var(--color-surface) !important;
+}
+
+.ant-card[class*="border-card-border"] {
+  border-color: var(--color-card-border) !important;
+}
+
+.ant-divider[class*="border-border"] {
+  border-color: var(--color-border) !important;
 }
 

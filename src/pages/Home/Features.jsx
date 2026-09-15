@@ -7,21 +7,24 @@ const features = [
     description:
       "Structure tasks into clean ledgers, projects, and custom views tailored to your workflow.",
     icon: <AppstoreOutlined />,
-    iconClassName: "text-primary",
+    badgeBg: "bg-[#feece9]",
+    badgeColor: "text-[#e34432]",
   },
   {
     title: "Focus",
     description:
       "Zero in on today's priorities with intelligent filtering and calm, paper-inspired UI states.",
     icon: <AimOutlined />,
-    iconClassName: "text-secondary",
+    badgeBg: "bg-[#e7f1f9]",
+    badgeColor: "text-[#0f66ae]",
   },
   {
     title: "Share",
     description:
       "Seamlessly collaborate by sharing individual items or entire project ledgers without friction.",
     icon: <ShareAltOutlined />,
-    iconClassName: "text-success",
+    badgeBg: "bg-[#eaf4ea]",
+    badgeColor: "text-[#446c3d]",
   },
 ];
 
@@ -29,44 +32,39 @@ function Features() {
   return (
     <section
       id="features"
-      className="bg-background px-6 py-20 font-manrope sm:px-10 lg:px-16"
+      className="bg-background px-6 py-12 font-manrope sm:px-10 lg:px-20"
     >
-      <div className="rounded-3xl bg-surface-secondary/40 p-8 sm:p-12 lg:p-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold leading-tight tracking-tight text-text-primary sm:text-4xl">
-              Everything you need to stay on top of your work
-            </h2>
-            <p className="mt-5 text-base leading-8 text-text-secondary sm:text-lg">
-              Designed with absolute restraint. No clutter, no distractions just
-              pure execution speed.
-            </p>
-          </div>
-
-          <Row gutter={[24, 24]} className="mt-12">
-            {features.map((feature) => (
-              <Col key={feature.title} xs={24} md={8}>
-                <Card
-                  className="h-full rounded-xl border border-card-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                  styles={{ body: { padding: 32 } }}
-                >
-                  <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-lg bg-surface-muted text-2xl ${feature.iconClassName}`}
-                    aria-hidden="true"
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="mt-6 text-xl font-semibold text-text-primary">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-3 text-base leading-7 text-text-secondary">
-                    {feature.description}
-                  </p>
-                </Card>
-              </Col>
-            ))}
-          </Row>
+      <div className="mx-auto max-w-6xl rounded-[28px] border border-[#ece6df] bg-[#f8f3ed] p-8 sm:p-12 lg:p-14">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
+            Everything you need to stay on top of your work
+          </h2>
+          <p className="mt-2 text-xs leading-relaxed text-text-muted sm:text-sm">
+            Designed with absolute restraint. No clutter, no distractions just
+            pure execution speed.
+          </p>
         </div>
+
+        <Row gutter={[20, 20]} className="mt-10">
+          {features.map((feature) => (
+            <Col key={feature.title} xs={24} md={8}>
+              <div className="flex h-full flex-col rounded-2xl border border-[#e8e2da] bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${feature.badgeBg} text-lg ${feature.badgeColor}`}
+                  aria-hidden="true"
+                >
+                  {feature.icon}
+                </div>
+                <h3 className="mt-5 text-base font-bold text-text-primary">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-text-muted">
+                  {feature.description}
+                </p>
+              </div>
+            </Col>
+          ))}
+        </Row>
       </div>
     </section>
   );

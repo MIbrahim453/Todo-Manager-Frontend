@@ -4,28 +4,28 @@ function Testimonial() {
   return (
     <section
       id="testimonial"
-      className="bg-background px-6 py-20 font-manrope sm:px-10 sm:py-24 lg:px-16"
+      className="bg-background px-6 py-14 font-manrope sm:px-10 lg:px-20"
     >
-      <div className="mx-auto max-w-6xl text-center">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-error-bg text-4xl text-primary">
+      <div className="mx-auto max-w-5xl text-center">
+        <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-xl border border-[#fbd3cd] bg-[#feece9] text-xl text-primary shadow-2xs">
           <SafetyCertificateOutlined aria-hidden="true" />
         </div>
-        <h2 className="mt-9 text-4xl font-bold leading-tight tracking-tight text-text-primary sm:text-5xl">
+        <h2 className="mt-5 text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
           Built with control in mind
         </h2>
-        <p className="mx-auto mt-5 max-w-4xl text-base leading-8 text-text-secondary sm:text-xl">
+        <p className="mx-auto mt-2 max-w-xl text-xs leading-relaxed text-text-muted sm:text-sm">
           Whether you operate as an individual contributor or manage
           organization-wide permissions, Todo Manager scales securely with
           role-based registries and audit logs.
         </p>
 
-        <div className="mt-10 rounded-2xl border border-border bg-surface-secondary px-6 py-10 sm:px-10 sm:py-11">
-          <blockquote className="text-xl italic leading-relaxed text-text-primary sm:text-2xl">
+        <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-[#ece6df] bg-[#fbf7f1] px-8 py-9 sm:px-12 sm:py-10">
+          <blockquote className="text-base italic leading-relaxed text-text-primary sm:text-lg">
             &ldquo;Simple enough for everyday tasks. Flexible enough for shared
             work.&rdquo;
           </blockquote>
-          <p className="mt-6 text-base font-medium uppercase tracking-widest text-text-secondary sm:text-lg">
-            &mdash; Paper &amp; Ink Studio Ledger
+          <p className="mt-4 text-[10px] font-semibold uppercase tracking-widest text-text-muted sm:text-xs">
+            &mdash; PAPER &amp; INK STUDIO LEDGER
           </p>
         </div>
       </div>
