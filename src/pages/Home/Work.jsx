@@ -6,21 +6,21 @@ const steps = [
     title: "Created",
     description:
       "Jot down tasks instantly with keyboard shortcuts or voice memos. Everything lands cleanly in your inbox.",
-    numberClassName: "text-primary",
+    numberClassName: "text-primary!",
   },
   {
     number: "02",
     title: "Organize",
     description:
       "Categorize into ledgers, tag with metadata, and prioritize with slender accent bars.",
-    numberClassName: "text-secondary",
+    numberClassName: "text-secondary!",
   },
   {
     number: "03",
     title: "Share",
     description:
       "Send direct task links to collaborators or invite team members to entire project views.",
-    numberClassName: "text-success",
+    numberClassName: "text-success!",
   },
 ];
 

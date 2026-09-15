@@ -1,4 +1,4 @@
-import { Layout, Menu, message } from "antd";
+import { Layout, Menu } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   AppstoreOutlined,
@@ -100,7 +100,7 @@ function Sidebar({ role = "user" }) {
       {contextHolder}
       <Sider
       width={250}
-      className="bg-background border-r border-border"
+      className="bg-background! border-r! border-border!"
       style={{
         position: "sticky",
         top: 0,
@@ -134,7 +134,7 @@ function Sidebar({ role = "user" }) {
             items={styledItems}
             selectedKeys={[location.pathname]}
             onClick={({ key }) => navigate(key)}
-            className="border-0 bg-transparent cursor-pointer"
+            className="border-0! bg-transparent! cursor-pointer"
             style={{
               background: "transparent",
               borderInlineEnd: "none",

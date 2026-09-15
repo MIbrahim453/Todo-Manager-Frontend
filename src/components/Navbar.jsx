@@ -28,7 +28,7 @@ function Navbar() {
 
   return (
     <Header
-      className={`flex justify-between items-center bg-background px-4 sm:px-6 md:px-10 py-3 sticky top-0 z-50 transition-shadow duration-300 ${
+      className={`flex justify-between items-center bg-background! px-4 sm:px-6 md:px-10 py-3 sticky top-0 z-50 transition-shadow duration-300 ${
         scrolled ? "shadow-md" : "shadow-none"
       }`}
     >
@@ -69,7 +69,7 @@ function Navbar() {
         type="text"
         icon={<MenuOutlined style={{ fontSize: 22 }} />}
         onClick={toggleNavbar}
-        className="flex md:hidden items-center justify-center text-text-primary"
+        className="flex md:hidden items-center justify-center text-text-primary!"
         aria-label="Open menu"
       />
       <Drawer

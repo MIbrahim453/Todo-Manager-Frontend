@@ -7,21 +7,21 @@ const features = [
     description:
       "Structure tasks into clean ledgers, projects, and custom views tailored to your workflow.",
     icon: <AppstoreOutlined />,
-    iconClassName: "text-primary",
+    iconClassName: "text-primary!",
   },
   {
     title: "Focus",
     description:
       "Zero in on today's priorities with intelligent filtering and calm, paper-inspired UI states.",
     icon: <AimOutlined />,
-    iconClassName: "text-secondary",
+    iconClassName: "text-secondary!",
   },
   {
     title: "Share",
     description:
       "Seamlessly collaborate by sharing individual items or entire project ledgers without friction.",
     icon: <ShareAltOutlined />,
-    iconClassName: "text-success",
+    iconClassName: "text-success!",
   },
 ];
 
@@ -51,7 +51,7 @@ function Features() {
                 styles={{ body: { padding: 28 } }}
               >
                 <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-md bg-surface-muted text-2xl ${feature.iconClassName}`}
+                  className={`flex h-12 w-12 items-center justify-center rounded-md bg-surface-muted! text-2xl! ${feature.iconClassName}`}
                   aria-hidden="true"
                 >
                   {feature.icon}
