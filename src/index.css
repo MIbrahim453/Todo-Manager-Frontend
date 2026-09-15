@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-@layer theme, base, antd, components, utilities;
-
 @import "tailwindcss";
 
 @theme {
@@ -45,5 +43,10 @@
   html {
     scrollbar-gutter: stable;
   }
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
