@@ -2,18 +2,16 @@ import Hero from './Hero'
 import Features from './Features'
 import Testimonial from './Testimonial'
 import Work from './Work'
-import CallToAction from './CallToAction'
 
 function Home() {
   return (
-    <>
-        <Hero />
-        <Features />
-        <Work />
-        <Testimonial />
-        <CallToAction />
-    </>
-  )
+    <div className="w-full overflow-x-hidden">
+      <Hero />
+      <Features />
+      <Work />
+      <Testimonial />
+    </div>
+  );
 }
 
 export default Home

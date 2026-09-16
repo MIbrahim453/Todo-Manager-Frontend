@@ -28,66 +28,61 @@ function Navbar() {
 
   return (
     <Header
-      className={`sticky top-0 z-50 flex h-20 items-center justify-between border-b border-[#ede7e0] bg-[#fefdfc] px-6 transition-all duration-300 sm:px-10 lg:px-20 ${
-        scrolled ? "shadow-xs" : "shadow-none"
+      className={`min-h-16 flex justify-between items-center bg-background! px-4 sm:px-6 md:px-10! py-3 sticky top-0 z-50 transition-shadow duration-300 border-b border-border ${
+        scrolled ? "shadow-md" : "shadow-none"
       }`}
-      style={{ lineHeight: "normal" }}
     >
-      <div className="shrink-0">
-        <Link to="/" className="flex items-center gap-2.5">
-          <img src={logo} alt="Todo Manager" className="h-8 w-8 object-contain" />
-          <span className="font-manrope text-lg font-bold tracking-tight text-text-primary sm:text-xl">
+      <div className="shrink-0!">
+        <Link to="/" className="flex! items-center! gap-2!">
+          <img src={logo} alt="Todo Manager" className="w-10! h-10! object-contain!" />
+          <h1 className="text-xl! sm:text-2xl! text-text-primary! font-manrope! font-semibold!">
             Task Manager
-          </span>
+          </h1>
         </Link>
       </div>
-
-      <nav className="hidden items-center gap-10 font-manrope text-xs font-medium md:flex">
+      <div className="hidden! md:flex! items-center! gap-10! font-manrope! font-medium!">
         {navLinks.map((link) => (
           <a
             key={link.href}
-            className="text-text-secondary transition-colors hover:text-primary"
+            className="text-text-primary! hover:text-text-muted! transition-colors!"
             href={link.href}
           >
             {link.label}
           </a>
         ))}
-      </nav>
-
-      <div className="hidden items-center gap-3 font-manrope md:flex">
+      </div>
+      <div className="hidden! md:flex! items-center! gap-6! font-manrope! font-medium!">
         <Link
           to="/login"
-          className="inline-flex items-center justify-center rounded-lg border border-[#d7d6d4] bg-white px-5 py-2 text-xs font-semibold text-text-primary shadow-2xs transition-all hover:bg-surface-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+          className="inline-flex! items-center! justify-center! text-text-primary! hover:bg-surface-secondary! px-4! py-2! rounded-md! transition-all! duration-300!"
         >
           Login
         </Link>
         <Link
           to="/sign-up"
-          className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2 text-xs font-semibold text-white shadow-xs transition-all hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
+          className="inline-flex! items-center! justify-center! bg-primary! text-primary-text! hover:bg-primary-hover! px-4! py-2! rounded-md! transition-all! duration-300!"
         >
           Get Started
         </Link>
       </div>
-
-      <div className="flex items-center md:hidden">
+      <div className="flex! md:hidden! items-center!">
         <Button
           type="text"
-          icon={<MenuOutlined style={{ fontSize: 20, color: "#25221e" }} />}
+          icon={<MenuOutlined style={{ fontSize: 22, color: "var(--color-text-primary)" }} />}
           onClick={toggleNavbar}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#d7d6d4] bg-white text-text-primary transition-colors hover:bg-surface-secondary"
+          className="flex! items-center! justify-center! text-text-primary!"
           aria-label="Open menu"
         />
       </div>
-
       <Drawer
         title={
           <Link
             to="/"
-            className="flex items-center gap-2"
+            className="flex! items-center! gap-2!"
             onClick={closeDrawer}
           >
-            <img src={logo} alt="Todo Manager" className="h-8 w-8 object-contain" />
-            <span className="font-manrope text-lg font-bold text-text-primary">
+            <img src={logo} alt="Todo Manager" className="w-8! h-8! object-contain!" />
+            <span className="text-lg! text-text-primary! font-manrope! font-semibold!">
               Task Manager
             </span>
           </Link>
@@ -95,30 +90,29 @@ function Navbar() {
         placement="right"
         onClose={closeDrawer}
         open={isOpen}
-        width={300}
-        closeIcon={<CloseOutlined style={{ fontSize: 16, color: "#25221e" }} />}
+        width={280}
+        closeIcon={<CloseOutlined style={{ fontSize: 18, color: "var(--color-text-primary)" }} />}
         styles={{
-          wrapper: { fontFamily: "Manrope, sans-serif" },
-          content: { backgroundColor: "#fefdfc" },
-          header: {
-            backgroundColor: "#fefdfc",
-            borderBottom: "1px solid #d7d6d4",
-            padding: "16px 20px",
-          },
+          wrapper: { fontFamily: "var(--font-manrope)" },
+          content: { backgroundColor: "var(--color-background)" },
           body: {
-            backgroundColor: "#fefdfc",
-            padding: "20px",
+            backgroundColor: "var(--color-background)",
+            padding: "16px 24px",
             display: "flex",
             flexDirection: "column",
-            gap: "12px",
+            gap: "8px",
+          },
+          header: {
+            backgroundColor: "var(--color-background)",
+            borderBottom: "1px solid var(--color-border)",
           },
         }}
       >
-        <nav className="flex flex-col gap-1.5 font-manrope font-medium">
+        <nav className="flex! flex-col! gap-1! font-manrope! font-medium!">
           {navLinks.map((link) => (
             <a
               key={link.href}
-              className="rounded-md px-3.5 py-2.5 text-base text-text-primary transition-colors hover:bg-surface-secondary hover:text-primary"
+              className="text-text-primary! hover:text-text-muted! hover:bg-surface-secondary! px-3! py-2.5! rounded-md! transition-all! duration-200!"
               href={link.href}
               onClick={closeDrawer}
             >
@@ -126,20 +120,18 @@ function Navbar() {
             </a>
           ))}
         </nav>
-
-        <div className="my-2 border-t border-border" />
-
-        <div className="flex flex-col gap-3 font-manrope">
+        <div className="border-t! border-border! my-2!" />
+        <div className="flex! flex-col! gap-3! font-manrope! font-medium!">
           <Link
             to="/login"
-            className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2.5 text-center text-sm font-semibold text-text-primary transition-colors hover:bg-surface-secondary hover:text-primary"
+            className="inline-flex! items-center! justify-center! text-text-primary! hover:bg-surface-secondary! px-3! py-2.5! rounded-md! text-center! transition-all! duration-300! border! border-border!"
             onClick={closeDrawer}
           >
             Login
           </Link>
           <Link
             to="/sign-up"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-text transition-colors hover:bg-primary-hover"
+            className="inline-flex! items-center! justify-center! bg-primary! text-primary-text! hover:bg-primary-hover! px-3! py-2.5! rounded-md! text-center! transition-all! duration-300!"
             onClick={closeDrawer}
           >
             Get Started

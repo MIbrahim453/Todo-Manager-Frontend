@@ -35,8 +35,8 @@ function Login() {
   return (
     <>
       {contextHolder}
-      <div className="min-h-screen w-full overflow-hidden flex flex-col justify-center items-center font-manrope! bg-background! p-5!">
-        <div className="text-center mb-6">
+      <div className="min-h-screen! w-full! overflow-hidden! flex! flex-col! justify-center! items-center! font-manrope! bg-background! p-5!">
+        <div className="text-center! mb-6!">
           <Title level={2} className="font-bold!">
             Welcome Back
           </Title>
@@ -44,7 +44,7 @@ function Login() {
             Sign in to your Todo Manager desk.
           </Text>
         </div>
-        <Card className="w-full max-w-md bg-surface!">
+        <Card className="w-full! max-w-md! bg-surface!">
           <Form
             form={form}
             layout="vertical"
@@ -52,7 +52,7 @@ function Login() {
             autoComplete="off"
           >
             <Form.Item
-              className="font-semibold"
+              className="font-semibold!"
               label="Email"
               name="email"
               rules={[
@@ -73,7 +73,7 @@ function Login() {
               />
             </Form.Item>
             <Form.Item
-              className="font-semibold"
+              className="font-semibold!"
               label="Password"
               name="password"
               rules={[
@@ -93,7 +93,7 @@ function Login() {
                 placeholder="Enter Your Password"
               />
             </Form.Item>
-            <div className="flex justify-end mb-4">
+            <div className="flex! justify-end! mb-4!">
               <Link
                 to="/forget-password"
                 className="text-primary! font-semibold!"
@@ -115,7 +115,7 @@ function Login() {
           </Form>
           <Divider className="my-5! text-text-muted!">or</Divider>
           <OAuth />
-          <div className="flex justify-center items-center gap-2 mt-4">
+          <div className="flex! justify-center! items-center! gap-2! mt-4!">
             <Text type="secondary" className="font-semibold!">
               Don't have an account?
             </Text>

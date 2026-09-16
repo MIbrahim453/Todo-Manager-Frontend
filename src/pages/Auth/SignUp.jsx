@@ -31,8 +31,8 @@ function SignUp() {
   return (
     <>
       {contextHolder}
-      <div className="min-h-screen w-full flex flex-col justify-center items-center overflow-hidden font-manrope! bg-background! p-5!">
-      <div className="text-center mb-6">
+      <div className="min-h-screen! w-full! flex! flex-col! justify-center! items-center! overflow-hidden! font-manrope! bg-background! p-5!">
+      <div className="text-center! mb-6!">
         <Title level={2} className="font-bold!">
           Join Now
         </Title>
@@ -40,7 +40,7 @@ function SignUp() {
           Start organizing your desk, personal ledgers, and shared team todos
         </Text>
       </div>
-      <Card className="w-full max-w-md bg-surface!">
+      <Card className="w-full! max-w-md! bg-surface!">
         <Form
           form={form}
           layout="vertical"
@@ -48,7 +48,7 @@ function SignUp() {
           autoComplete="off"
         >
           <Form.Item
-            className="font-semibold"
+            className="font-semibold!"
             label="Name"
             name="name"
             rules={[
@@ -65,7 +65,7 @@ function SignUp() {
             />
           </Form.Item>
           <Form.Item
-            className="font-semibold"
+            className="font-semibold!"
             label="Email"
             name="email"
             rules={[
@@ -86,7 +86,7 @@ function SignUp() {
             />
           </Form.Item>
           <Form.Item
-            className="font-semibold"
+            className="font-semibold!"
             label="Password"
             name="password"
             rules={[
@@ -107,7 +107,7 @@ function SignUp() {
             />
           </Form.Item>
           <Form.Item
-            className="font-semibold"
+            className="font-semibold!"
             label="Confirm Password"
             name="confirmPassword"
             dependencies={["password"]}
@@ -147,7 +147,7 @@ function SignUp() {
         </Form>
         <Divider className="my-5! text-text-muted!">or</Divider>
         <OAuth />
-        <div className="flex justify-center items-center gap-2 mt-4">
+        <div className="flex! justify-center! items-center! gap-2! mt-4!">
           <Text type="secondary" className="font-semibold!">
             Already have an account?
           </Text>

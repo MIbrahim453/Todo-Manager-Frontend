@@ -4,15 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider, App as AntApp } from "antd";
-import { StyleProvider } from "@ant-design/cssinjs";
 import AuthProvider from "./context/authContext.jsx";
 import UserProvider from "./context/userContext.jsx";
 import TodoProvider from "./context/todoContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <StyleProvider hashPriority="high">
-      <ConfigProvider
+    <ConfigProvider
       theme={{
         token: {
           fontFamily: "Manrope, sans-serif",
@@ -107,6 +105,5 @@ createRoot(document.getElementById("root")).render(
         </BrowserRouter>
       </AntApp>
     </ConfigProvider>
-    </StyleProvider>
   </StrictMode>,
 );
