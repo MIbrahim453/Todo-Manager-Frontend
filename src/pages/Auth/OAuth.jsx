@@ -21,13 +21,14 @@ function OAuth() {
       const res = await google(idToken);
       if (res.success) {
         messageApi.success(res.message || "User Login successful");
+
+        if (res.data.user.role === "member") {
+          navigate("/user/dashboard");
+        } else {
+          navigate("/admin/dashboard");
+        }
       } else {
         messageApi.error(res.message || "Google Login failed");
-      }
-      if (res.data.user.role === "member") {
-        navigate("/user/dashboard");
-      } else {
-        navigate("/admin/dashboard");
       }
     } catch (error) {
       messageApi.error(error?.response?.data?.message || "Google Login failed");

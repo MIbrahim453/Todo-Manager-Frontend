@@ -19,14 +19,14 @@ function Login() {
       if (result.success) {
         messageApi.success(result.message || "User Login successful");
         form.resetFields();
+
+        if (result.data.user.role === "member") {
+          navigate("/user/dashboard");
+        } else {
+          navigate("/admin/dashboard");
+        }
       } else {
         messageApi.error(result.message || "Login failed");
-      }
-
-      if (result.data.user.role === "member") {
-        navigate("/user/dashboard");
-      } else {
-        navigate("/admin/dashboard");
       }
     } catch (error) {
       messageApi.error(error?.response?.data?.message || "Login failed");

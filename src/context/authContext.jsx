@@ -44,6 +44,7 @@ const AuthProvider = ({ children }) => {
       return res;
     } catch (error) {
       console.log(error);
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -61,6 +62,7 @@ const AuthProvider = ({ children }) => {
       return res;
     } catch (error) {
       console.log(error);
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -78,6 +80,7 @@ const AuthProvider = ({ children }) => {
       return res;
     } catch (error) {
       console.log(error);
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -95,6 +98,7 @@ const AuthProvider = ({ children }) => {
       return res;
     } catch (error) {
       console.log(error);
+      throw error;
     } finally {
       setLoading(false);
     }
