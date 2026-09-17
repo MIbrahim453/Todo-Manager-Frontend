@@ -90,16 +90,16 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const res = await logoutApi();
-      if (res.success) {
-        setUser(null);
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("refreshToken");
-      }
       return res;
     } catch (error) {
       console.log(error);
       throw error;
     } finally {
+      // Logout is local state cleanup as well; it must work even if the
+      // access token has expired and the API rejects the logout request.
+      setUser(null);
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
       setLoading(false);
     }
   };
